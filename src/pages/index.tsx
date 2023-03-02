@@ -15,107 +15,144 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+        <img className={styles.logo} src='./logo.png' />
+        <div className={styles.container}>
+          <div className={styles.topInfo}>
+            <h1>Заявка на кредитную карту</h1>
+            <h3>Кредитная карта с целым годом без %</h3>
+            <div className={styles.box}>
+              <div>
+                <img src='./card.png' alt='card' />
+              </div>
+              <div className={styles.featureBox}>
+                <ul>
+                  <li className={styles.feature}>
+                    <div>
+                      <div className={styles.featureTitle}>Год без %</div>
+                      <div className={styles.featureText}>на покупки в первые 30 дней</div>
+                    </div>
+                  </li>
+                  <li className={styles.feature}>
+                    <div>
+                      <div className={styles.featureTitle}>0 ₽ обслуживание</div>
+                      <div className={styles.featureText}>навсегда и без условий</div>
+                    </div>
+                  </li>
+                  <li className={styles.feature}>
+                    <div>
+                      <div className={styles.featureTitle}>до 50 000 ₽</div>
+                      <div className={styles.featureText}>снимайте без комиссии каждый месяц</div>
+                    </div>
+                  </li>
+                  <li className={styles.feature}>
+                    <div>
+                      <div className={styles.featureTitle}>500 000 ₽</div>
+                      <div className={styles.featureText}>максимальный кредитный лимит</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <div className={styles.progress}>
+            <p>Шаг 1 из 5: Заявка заполнена на 0%</p>
+            <div>
+              <div className={styles.indicator}>
+                <div></div>
+                <div className={styles.indicatorStep}></div>
+              </div>
+              <p className={styles.progressStatus}></p>
+            </div>
+          </div>
+          <form className={styles.formBlock}>
+            <div className={styles.form}>
+              <h2>Персональные данные</h2>
+              <div className={styles.formContetn}>
+                <div>
+                  <p>Заполните заявку через Госуслуги: это сэкономит время и повысит шансы на одобрение</p>
+                  <button>Заполнить через Госуслуги</button>
+                </div>
+                <div><img src='./gos.svg' alt='gosuslugi' /></div>
+              </div>
+            </div>
+
+
+            <div className={styles.inputBox}>
+              <input className={styles.input} placeholder='Фамилия' />
+              <span className={styles.span}>Укажите точно как в паспорте</span>
+            </div>
+            <div className={styles.inputBox}>
+              <input className={styles.input} placeholder='Имя' />
+              <span className={styles.span}>Укажите точно как в паспорте</span>
+            </div>
+            <div className={styles.inputBox}>
+              <input className={styles.input} placeholder='Отчество' />
+              <span className={styles.span}>Укажите точно как в паспорте. Если отчество отсутствует - поставьте прочерк</span>
+            </div>
+            <div className={styles.boxAdress}>
+              <div className={styles.inputBoxAdress}>
+                <input className={styles.input} placeholder='Мобильный телефон' />
+                <span className={styles.span}>Мы отправим решение по заявке на указанный номер</span>
+              </div>
+              <div className={styles.inputBoxAdress}>
+                <input className={styles.input} placeholder='Электронная почта' />
+                <span className={styles.span}>Мы отправим решение по заявке на указанный адрес</span>
+              </div>
+            </div>
+            <div>
+              <div className={styles.treatment}>
+                <label>
+                  <input type='checkbox' />
+                  <img />
+                </label>
+                <div className={styles.treatmentText}>
+                  <span>Я соглашаюсь </span>
+                  <a><span>с условиями</span></a>
+                  <span> и даю свое</span>
+                  <a><span>согласие</span></a>
+                  <span> на обработку и использование моих персональных данных, и разрешаю сделать запрос в бюро кредитных историй</span>
+                </div>
+              </div>
+              <div className={styles.agreement}>
+                <button className={styles.agreementBtn}>Продолжить</button>
+                <div className={styles.agreementText}>
+                  Мы гарантируем безопасность и сохранность ваших данных
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+
+
+        <div className={styles.footer}>
+          <div className={styles.footerContainer}>
+            <div className={styles.footerLink}>
+              <a>
+                <img src='./pdf.png' alt='pdf' />
+                <span>Памятка о беспроцентном периоде по кредитной карте</span>
+              </a>
+            </div>
+            <div className={styles.footerLink}>
+              <a>
+                <img src='./pdf.png' alt='pdf' />
+                <span>Кредитная карта 1 год без % Тарифы</span>
+              </a>
+            </div>
+            <div className={styles.footerLink}>
+              <a>
+                <img src='./pdf.png' alt='pdf' />
+                <span>Правила акции</span>
+              </a>
+            </div>
+            <div className={styles.footerText}>
+              Длительность БП по данным исследования banki.ru. Беспроцентный период (БП) 365 дней начинается со дня после 1-й покупки и распространяется на покупки, совершённые в периоде = 30 дням после заключения ДС о БП (далее — Период). После окончания Периода, при совершении покупки на 31 день и далее, БП = 100 дням со дня после покупки. БП действует при ежемесячном платеже не менее 3-10% долга (не 300 ₽) и погашении всей задолженности за срок БП. Иначе % начисляются с 1-го дня БП до полного погашения задолженности. % ставка: 11,99%—69,99% годовых, снятие до 50 000 ₽ в месяц без комиссии, лимит кредитования: 5000—500 000 ₽ (индивидуально). Беспроцентный период на операции снятия наличных и приравненные к ним не распространяется. Погашение задолженности по покупкам, совершённым после окончания Периода, возможно только после полного погашения задолженности по покупкам за Период. Кэшбэк 1000 ₽. за первую покупку от 1000 ₽. Акция с 14.11.22 по 31.12.22. Не оферта. Подробнее:alfabank.ru. АО «Альфа-Банк». Ген. лицензия ЦБ РФ № 1326 от 16.01.2015 г.
+            </div>
+            <div className={styles.footerText}>
+              Генеральная лицензия Банка России №1326 от 16 января 2015 г. «Альфа-Банк» является частью консорциума «Альфа-Групп» © 2001–2023 «Альфа-Банк» 107078, Москва, ул. Каланчевская, 27. У вас есть вопросы по заполнению анкеты? Звоните: 8 800 200 2551  или
+              <a><span>напишите нам</span></a>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
         </div>
       </main>
     </>
