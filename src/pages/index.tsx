@@ -2,10 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import ProgressBar from '../components/ProgressBar';
+import Form from '../components/Form';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -54,77 +57,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={styles.progress}>
-            <p>Шаг 1 из 5: Заявка заполнена на 0%</p>
-            <div>
-              <div className={styles.indicator}>
-                <div></div>
-                <div className={styles.indicatorStep}></div>
-              </div>
-              <p className={styles.progressStatus}></p>
-            </div>
-          </div>
-          <form className={styles.formBlock}>
-            <div className={styles.form}>
-              <h2>Персональные данные</h2>
-              <div className={styles.formContetn}>
-                <div>
-                  <p>Заполните заявку через Госуслуги: это сэкономит время и повысит шансы на одобрение</p>
-                  <button>Заполнить через Госуслуги</button>
-                </div>
-                <div><img src='./gos.svg' alt='gosuslugi' /></div>
-              </div>
-            </div>
-
-
-            <div className={styles.inputBox}>
-              <input className={styles.input} placeholder='Фамилия' />
-              <span className={styles.span}>Укажите точно как в паспорте</span>
-            </div>
-            <div className={styles.inputBox}>
-              <input className={styles.input} placeholder='Имя' />
-              <span className={styles.span}>Укажите точно как в паспорте</span>
-            </div>
-            <div className={styles.inputBox}>
-              <input className={styles.input} placeholder='Отчество' />
-              <span className={styles.span}>Укажите точно как в паспорте. Если отчество отсутствует - поставьте прочерк</span>
-            </div>
-            <div className={styles.boxAdress}>
-              <div className={styles.inputBoxAdress}>
-                <input className={styles.input} placeholder='Мобильный телефон' />
-                <span className={styles.span}>Мы отправим решение по заявке на указанный номер</span>
-              </div>
-              <div className={styles.inputBoxAdress}>
-                <input className={styles.input} placeholder='Электронная почта' />
-                <span className={styles.span}>Мы отправим решение по заявке на указанный адрес</span>
-              </div>
-            </div>
-            <div>
-              <div className={styles.treatment}>
-                <label>
-                  <input type='checkbox' />
-                  <img />
-                </label>
-                <div className={styles.treatmentText}>
-                  <span>Я соглашаюсь </span>
-                  <a><span>с условиями</span></a>
-                  <span> и даю свое</span>
-                  <a><span>согласие</span></a>
-                  <span> на обработку и использование моих персональных данных, и разрешаю сделать запрос в бюро кредитных историй</span>
-                </div>
-              </div>
-              <div className={styles.agreement}>
-                <button className={styles.agreementBtn}>Продолжить</button>
-                <div className={styles.agreementText}>
-                  Мы гарантируем безопасность и сохранность ваших данных
-                </div>
-              </div>
-            </div>
-          </form>
+          <ProgressBar />
+          <Form />
         </div>
-
-
-
         <div className={styles.footer}>
           <div className={styles.footerContainer}>
             <div className={styles.footerLink}>
