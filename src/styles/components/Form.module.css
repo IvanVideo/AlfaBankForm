@@ -64,11 +64,25 @@
     padding-bottom: 24px;
 }
 
+.inputGroup {
+    display: flex;
+    position: relative;
+}
+
+.inputPlaceholder {
+    position: absolute;
+    transition: 0.5s;
+    font-size: 16px;
+    padding: 22px 8px;
+    z-index: -1;
+    color: rgba(11, 31, 53, .6);
+}
+
 .inputBoxAdress {
     width: 266px;
 }
 
-.span {
+.inputError {
     padding: 5px 12px 0 0;
     color: rgba(11, 31, 53, .6);
     font-weight: 400;
@@ -78,13 +92,24 @@
 .input {
     width: 100%;
     height: 56px;
-    padding: 8px 12px;
+    padding: 26px 12px 8px;
     border: none;
-    border-bottom: 1px solid rgba(11, 31, 53, .4);
+    border-bottom: 2px solid rgba(11, 31, 53, .4);
     background-color: rgba(11, 31, 53, .05);
     font-weight: 400;
     line-height: inherit;
     margin-bottom: 5px;
+    outline:none;
+    transition: 0.5s;
+}
+
+.input:focus {
+    border-bottom: 2px solid rgba(11,31,53,.95);
+}
+
+.input:focus ~ .inputPlaceholder {
+    top: -18px;
+    font-size: 13px;
 }
 
 .input::placeholder {

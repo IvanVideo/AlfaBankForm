@@ -23,24 +23,39 @@ const Form = () => {
 
 
             <div className={styles.inputBox}>
-                <input className={styles.input} placeholder='Фамилия' />
+                <span className={styles.inputGroup}>
+                    <input className={styles.input} />
+                    <span className={styles.inputPlaceholder}>Фамилия</span>
+                </span>
+                <span className={styles.inputError}>Укажите точно как в паспорте</span>
+            </div>
+            <div className={styles.inputBox}>
+                <span className={styles.inputGroup}>
+                    <input className={styles.input} />
+                    <span className={styles.inputPlaceholder}>Имя</span>
+                </span>
                 <span className={styles.span}>Укажите точно как в паспорте</span>
             </div>
             <div className={styles.inputBox}>
-                <input className={styles.input} placeholder='Имя' />
-                <span className={styles.span}>Укажите точно как в паспорте</span>
-            </div>
-            <div className={styles.inputBox}>
-                <input className={styles.input} placeholder='Отчество' />
+                <span className={styles.inputGroup}>
+                    <input className={styles.input} />
+                    <span className={styles.inputPlaceholder}>Отчество</span>
+                </span>
                 <span className={styles.span}>Укажите точно как в паспорте. Если отчество отсутствует - поставьте прочерк</span>
             </div>
             <div className={styles.boxAdress}>
                 <div className={styles.inputBoxAdress}>
-                    <input className={styles.input} placeholder='Мобильный телефон' />
+                    <span className={styles.inputGroup}>
+                        <input className={styles.input} />
+                        <span className={styles.inputPlaceholder}>Мобильный телефон</span>
+                    </span>
                     <span className={styles.span}>Мы отправим решение по заявке на указанный номер</span>
                 </div>
                 <div className={styles.inputBoxAdress}>
-                    <input className={styles.input} placeholder='Электронная почта' />
+                    <span className={styles.inputGroup}>
+                        <input className={styles.input} />
+                        <span className={styles.inputPlaceholder}>Электронная почта</span>
+                    </span>
                     <span className={styles.span}>Мы отправим решение по заявке на указанный адрес</span>
                 </div>
             </div>
