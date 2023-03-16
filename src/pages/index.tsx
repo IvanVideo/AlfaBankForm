@@ -63,19 +63,19 @@ export default function Home() {
         <div className={styles.footer}>
           <div className={styles.footerContainer}>
             <div className={styles.footerLink}>
-              <a>
+              <a href="https://alfabank.st/alfaforms/ca/dd/alfaforms/memo_grace_period.pdf" target="_blank">
                 <img src='./pdf.png' alt='pdf' />
                 <span>Памятка о беспроцентном периоде по кредитной карте</span>
               </a>
             </div>
             <div className={styles.footerLink}>
-              <a>
+              <a href="https://alfabank.servicecdn.ru/site-upload/c7/61/967/tariffs_1year_1_21102022.pdf" target="_blank">
                 <img src='./pdf.png' alt='pdf' />
                 <span>Кредитная карта 1 год без % Тарифы</span>
               </a>
             </div>
             <div className={styles.footerLink}>
-              <a>
+              <a href="https://alfabank.servicecdn.ru/site-upload/b3/05/967/rules_cashback_14112022.pdf" target="_blank">
                 <img src='./pdf.png' alt='pdf' />
                 <span>Правила акции</span>
               </a>

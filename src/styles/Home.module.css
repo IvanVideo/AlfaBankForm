@@ -96,10 +96,21 @@
   margin-bottom: 16px;
   color: #546272;
   font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.footerLink:hover {
+  text-decoration: none;
 }
 
 .footerLink img {
   margin-right: 8px;
+}
+
+.footerLink a {
+  display: flex;
+  align-items: center;
 }
 
 .footerText {

@@ -71,7 +71,7 @@
 
 .inputPlaceholder {
     position: absolute;
-    transition: 0.5s;
+    transition: 0.3s;
     font-size: 16px;
     padding: 22px 8px;
     z-index: -1;
@@ -83,6 +83,13 @@
 }
 
 .inputError {
+    padding: 5px 12px 0 0;
+    color: #ff5c5c;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.inputDescription {
     padding: 5px 12px 0 0;
     color: rgba(11, 31, 53, .6);
     font-weight: 400;
@@ -100,14 +107,15 @@
     line-height: inherit;
     margin-bottom: 5px;
     outline:none;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .input:focus {
     border-bottom: 2px solid rgba(11,31,53,.95);
 }
 
-.input:focus ~ .inputPlaceholder {
+.input:focus ~ .inputPlaceholder,
+.input:not(:placeholder-shown) ~ .inputPlaceholder {
     top: -18px;
     font-size: 13px;
 }
